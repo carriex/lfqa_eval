@@ -1,0 +1,66 @@
+<View className="container">
+  <Style> .para { margin-top: 20px; margin-bottom: 20px; font-size: 50px; width: 800px; display:in-line;}</Style>
+  <Style> .container { margin-top: 20px; padding-left:30px; }</Style>
+  <Style> .required { border-color: red; }</Style>
+  <Style> .choice-parent * { font-size: 18px; }</Style>
+  
+  <View className="para">	
+  	<HyperText name="question" value="$question_text">
+      <div style="font-size: 22px">
+        <b> Question: </b>$question_text
+      </div>
+    </HyperText>
+  </View>
+
+  <View style="white-space: pre-wrap; display: grid; font-size: 18px; grid-template: auto/1fr 1fr; column-gap: 1em">
+    <Header size="6">Answer A</Header>
+    <Header size="6">Answer B</Header>
+    <HyperText name="text1" value="$answer1" className="required"/>
+    <HyperText name="text2" value="$answer2"/>
+  </View>
+  
+  <Header style="color:green;" value="Which one of Answer A and B is better to the question?"/>
+  
+  <View className="choice-parent">
+  <Choices name="BetterAnswer" choice="single-radio" toName="question" showInline="true" required="true">
+    <Choice value="Answer A"/>
+    <Choice value="Answer B"/>
+  </Choices>
+  </View>
+  
+  <Header style="color:green;" value="Is it difficult to decide between the two answers because of their quality (e.g., they are similarly good or bad)?"/>
+  
+  <View className="choice-parent">
+  <Choices name="DifficultToChoose" choice="single-radio" toName="question" showInline="true" required="true">
+    <Choice value="Yes."/>
+    <Choice value="No."/>
+  </Choices>
+  </View>
+  
+  <Header style="color:green;">Your explanation:</Header>
+  
+  <View className="instructions">	
+  	<HyperText name="instructions">
+      <div style="font-size: 20px">
+      Please explain your choice by providing explicit comparisons of Answer A and B on the following aspects (if relevant). You can add comparisons of other aspects if they are not listed below. When providing quotations from the answers, <b>please also note where the quotation is from</b> (i.e., Answer A or B). 
+      </div>
+    </HyperText>
+  </View>
+  
+  <View className="instructions2"> 
+    <HyperText name="instructions2">
+      <div style="font-size: 18px; line-height: 1.5">
+        <li>If it is hard to choose between Answer A and B, please note the reasons here.</li>
+      	<li>Does the question contain <b>false assumptions</b>? If so, do Answer A and B point these out and correct them?</li>
+        <li>Do Answer A and B <b>consider all aspects</b> asked in the question? If not, please note which aspect in the question is not addressed in Answer A or B.</li>
+        <li>Does Answer A and B contain <b>fatal grammar mistakes</b> that make the answer hard to understand? If so, please provide quotations from the answer(s) that are ungrammatical.</li>
+     	<li>Are Answer A and B <b>well formulated</b> and <b>easy to follow</b>? If not, please provide quotations from the answer(s) and explain why.</li>
+        <li>Do Answer A and B <b>contain irrelevant information</b>? If so, please provide quotations from the answer(s) and explain why they are irrelevant.</li>
+        <li>Do Answer A and B <b>contain factually incorrect information or misconceptions</b>? If so, please (1) provide quotations from the answer(s); (2) explain why it’s incorrect; and (3) provide a reference (e.g., link to a web page) if available. </li>
+      </div>
+    </HyperText>
+  </View>
+  
+  <TextArea name="comments" toName="question" showSubmitButton="true" rows="15" editable="true" maxSubmissions="1" required="true"/>
+
+</View>
