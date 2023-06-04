@@ -1,5 +1,5 @@
 # lfqa_eval
-ACL 2023 paper [A Critical Evaluation of Evaluations for Long-form Question Answering](https://www.cs.utexas.edu/~fxu/pdfs/lfqa_eval_2022_website.pdf).
+
 ## Introduction
 This is the repository for annotated data and model for this paper: </br>
 
