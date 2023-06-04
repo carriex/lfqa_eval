@@ -35,7 +35,7 @@ Note:
 The unprocessed data from the prior work can be found at: 
 * Hurdles comparisons: [here](https://github.com/martiansideofthemoon/hurdles-longform-qa).
 * WebGPT comparisons: [here](https://
-openaipublic.blob.core.windows.net/webgpt-answer-viewer/comparisons.jsonl.)
+openaipublic.blob.core.windows.net/webgpt-answer-viewer/comparisons.jsonl)
 
 ### Raw expert annotations
 Raw expert annotations as well as annotations interface are under `raw_annotation_data`.
