@@ -3,7 +3,7 @@
 ## Introduction
 This is the repository for annotated data and model for this paper: </br>
 
-> Fangyuan Xu*, Yixiao Song*, Mohit Iyyer and Eunsol Choi. [A Critical Evaluation of Evaluations for Long-form Question Answering](https://www.cs.utexas.edu/~fxu/pdfs/lfqa_eval_2022_website.pdf).
+> Fangyuan Xu*, Yixiao Song*, Mohit Iyyer and Eunsol Choi. [A Critical Evaluation of Evaluations for Long-form Question Answering](https://arxiv.org/abs/2305.18201).
 > In: Proceedings of ACL. 2023.
 > *= Equal Contribution.
 
