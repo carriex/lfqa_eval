@@ -41,7 +41,26 @@ Raw expert annotations as well as annotations interface are under `raw_annotatio
 
 ### Automatic evaluation
 
-We are working on releasing the scripts to reproduce the automatic metric evaluation in the paper.
+For Self-BLEU, refer to this [script](https://github.com/ari-holtzman/degen/blob/master/metrics/self_bleu.py).
+
+#### Reference-based
+Please refer to the respective repo for [BertScore](https://github.com/Tiiiger/bert_score) and [BLEURT](https://github.com/google-research/bleurt).
+
+For BERTScore, we use the default `roberta-large` model for English (https://github.com/Tiiiger/bert_score) and report the maximal F1 BERTScore against the set of reference answers.
+
+For BLEURT, we use the `BLERUT-20` checkpoint.
+
+#### (Question, answer) metics
+Please refer to [BARTScore](https://github.com/neulab/BARTScore) repo for running BARTScor. We use `facebook/bart-large-cnn` which is fine-tuned on the CNN/DM dataset.
+
+For RANKGEN, refer to [RANKGEN](https://github.com/martiansideofthemoon/rankgen), we use the question as the prefix and the entire answer paragraph as the suffix to rank. We use the [RankGen-XL-all](https://huggingface.co/kalpeshk2011/rankgen-t5-xl-all).
+
+#### (Answer, reference) metric
+Refer to the [QAFactEval](https://github.com/salesforce/QAFactEval) repo for downloading the models and setting up the environments. We provide a script `run_qafacteval.py` which can be used to run QAFactEval to check the answer against the reference documents.
+
+#### Lerened metrics
+We are cleaning the code to release the learned long-former based reward model. Please contact the author (fangyuan[at]utexas.edu) if you would like to test it on your own data.
+
 
 ## Citation and contact
 If you find our work helpful, please cite us as
